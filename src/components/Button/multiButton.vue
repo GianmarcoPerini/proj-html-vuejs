@@ -1,6 +1,6 @@
 <template>
     <div class="button d-flex align-items-center">
-        <div class="single-button" @click="goTo(i)" v-for="(el, i) in button" :key="i"  :class="(i == indexCount) ? 'active' : '' "> {{el}} </div>
+        <div class="single-button" @click="goTo(i)" v-for="(el, i) in btnElements" :key="i"  :class="(i == indexCount) ? 'active' : '' "> {{el}} </div>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
     name:'multiButton',
     props: {
-        elementi: Array
+        btnElements: Array
     },
     data(){
         return{
