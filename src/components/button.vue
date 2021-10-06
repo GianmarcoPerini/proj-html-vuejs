@@ -1,0 +1,28 @@
+<template>
+    <button class="text-white">
+        PURCHASED
+    </button>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="scss" scoped>
+
+    button{
+        background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
+        border: none;
+        border-radius: 30px;
+        padding: 15px 45px;
+        transition: background-image 300ms linear;
+        font-size: .8rem;
+
+        &:hover{
+            background-image: linear-gradient(45deg, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
+        }
+    }
+
+</style>

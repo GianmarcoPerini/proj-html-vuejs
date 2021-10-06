@@ -1,15 +1,18 @@
 <template>
     <header>
-        <prefix />
+        <Prefix />
+        <Navigator />
     </header>
 </template>
 
 <script>
-import prefix from './prefix';
+import Prefix from './prefix';
+import Navigator from './navigator';
 export default {
     name: 'Main',
     components: {
-        prefix,
+        Prefix,
+        Navigator
     } 
 
 }
