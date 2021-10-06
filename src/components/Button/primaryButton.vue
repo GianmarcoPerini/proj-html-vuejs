@@ -1,11 +1,14 @@
 <template>
-    <button class="text-white">
-        PURCHASED
-    </button>
+    <button class="text-white"> {{msg}} </button>
 </template>
 
 <script>
 export default {
+    name: 'primaryButton',
+    props: {
+        msg: String
+    }
+    
 
 }
 </script>

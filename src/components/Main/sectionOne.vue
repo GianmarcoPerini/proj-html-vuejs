@@ -3,12 +3,21 @@
         <div class="container ">
             <div class="row">
                 <div class="col-6">
-                    <p class="fw-bold">17 YEARS OF EXPERIENCE</p>
+                    <p class="subT fw-bold">17 YEARS OF EXPERIENCE</p>
                     <h1 class="fw-bold">We ara a <br> Web Design <span>Agency</span></h1>
+                    <div class="spacer d-flex mt-4 mb-4">
+                        <div class="spacer-one h-100 w-25 bg-primary me-1"></div>
+                        <div class="spacer-two h-100 w-75 bg-primary"></div>
+                    </div>
+                    <p class="pt-4 pb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
+                    <Button class="mb-5" :msg="buttonMsg"/>
+                    <p class="pb-5">link</p>
+
                 </div>
                 <div class="col-6">
-                    <div class="box-img position-absolute"></div>
-                    <!-- <img class="h-100" src="../../assets/Group-36-2x.png" alt=""> -->
+                    <div class="box-img position-absolute">
+                        <img src="../../assets/Group-36-2x.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -16,7 +25,17 @@
 </template>
 
 <script>
+import Button from '../Button/secondaryButton.vue'
 export default {
+    name: 'sectionOne',
+    components: {
+        Button
+    },
+    data(){
+        return{
+            buttonMsg: 'READ MORE'
+        }
+    }
 
 }
 </script>
@@ -28,11 +47,18 @@ section{
     // height: 100vh;
     background-color: $backgroundPrimary;
     padding-top: 150px;
+    overflow-x: hidden;
+
+    .subT{
+        letter-spacing: 7px;
+        font-size: .7rem;
+        color: $textActive;
+    }
 
     p{
-        letter-spacing: 7px;
+        font-family: roboto;
+        color: $textPrimary;
         font-size: .9rem;
-        color: $textActive;
     }
 
     h1{
@@ -46,9 +72,31 @@ section{
     .box-img{
         top: 0;
         right: 0;
-        height: 100%;
-        width: 50%;
-        background-color: red;
+        height: 90%;
+        width: 60%;
+        // background-color: red;
+        // overflow: auto;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            right: -150px;
+            // left: -150px;
+            // top: 100px;
+        }
+    }
+
+    .spacer{
+        width: 50px;
+        height: 5px;
+        
+        .spacer-one,
+        .spacer-two{
+            border-radius: 10px;
+            background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
+        }
     }
 
     

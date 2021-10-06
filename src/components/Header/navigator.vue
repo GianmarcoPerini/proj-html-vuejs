@@ -9,14 +9,14 @@
             </ul>
         </div>
         <div>
-            <Button />
+            <Button :msg="buttonMsg"/>
             <i class="fas fa-search ms-4 fs-4"></i>
         </div>
     </nav>
 </template>
 
 <script>
-import Button from '../button'
+import Button from '../Button/primaryButton'
 export default {
     name: 'Navigator',
     components: {
@@ -33,6 +33,7 @@ export default {
                 { objTitle: 'BLOG' },
                 { objTitle: 'CONTACTS' },
             ],
+            buttonMsg: 'PURCHASE',
             indexCount: 2
         }
     },
@@ -46,6 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables/color';
 
 nav{
 
@@ -65,7 +67,7 @@ nav{
 
             a{
                 text-decoration: none;
-                color: #555555;
+                color: $textPrimary;
                 font-size: .85rem;
             }
         }
