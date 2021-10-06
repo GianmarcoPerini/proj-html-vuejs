@@ -1,6 +1,6 @@
 <template>
     <nav class="d-flex align-items-baseline justify-content-between p-4">
-        <div>
+        <div class="img-box">
             <img src="../../assets/cropped-Group-39-2x.png" alt="">
         </div>
         <div>
@@ -48,6 +48,14 @@ export default {
 <style lang="scss" scoped>
 
 nav{
+
+    .img-box{
+        width: 200px;
+
+        img{
+            width: 100%;
+        }
+    }
 
     ul{
         list-style: none;
