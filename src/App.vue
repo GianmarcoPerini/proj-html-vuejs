@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Heading from './components/Heading.vue';
-import mainWrapper from './components/mainWrapper.vue';
-import Footing from './components/Footing.vue';
+import Heading from './components/Header/Heading.vue';
+import mainWrapper from './components/Main/mainWrapper.vue';
+import Footing from './components/Footer/Footing.vue';
 
 
 export default {
