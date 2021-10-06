@@ -32,7 +32,9 @@ export default {
 <style lang="scss">
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
-@import './components/fonts/font.scss';
+@import './components/variables/font.scss';
+@import './components/variables/color.scss';
+
 
 
 #app{
