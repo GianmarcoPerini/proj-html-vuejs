@@ -5,7 +5,7 @@
         </div>
         <div>
             <ul class="d-flex">
-                <li class="pb-3" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" > <a href="#"> {{el.objTitle}} </a></li>
+                <li class="pb-3" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" ><a href="#"> {{el.objTitle}}</a></li>
             </ul>
         </div>
         <div>
