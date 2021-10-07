@@ -22,6 +22,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../variables/color';
 
+    span{
+        color: $textActive;
+    }
 </style>

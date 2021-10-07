@@ -79,14 +79,9 @@ section{
 
     h1{
         font-size: 3rem;
-
-        span{
-            color: $textActive;
-        }
     }
 .box-img{
     position: absolute;
-    // background-image: url(../../assets/Group-36-2x.png) ;
     top: 0;
     right: 0px;
     height: 120%;

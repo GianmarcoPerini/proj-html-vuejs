@@ -90,10 +90,6 @@ section{
     h1{
         line-height: 80px;
         font-size: 2.5rem;
-
-        span{
-            color: $textActive;
-        }
     }
 
     .box-img{

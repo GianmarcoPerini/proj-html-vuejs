@@ -1,7 +1,7 @@
 <template>
     <section class="overflow-hidden">
         <div class="fluid-container">
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col-lg-5 col-11">
                     <div class=" double-foto-box">
                         <div class="cover"></div>
@@ -11,7 +11,13 @@
                             
                     </div>
                 </div>
-                <div class="col-7">
+                <div class="col-4 me-5">
+                    <h1>Learn more about our <span>mission</span></h1>
+                    <div class="spacer d-flex mt-4 mb-4">
+                        <div class="spacer-one h-100 w-25 bg-primary me-1"></div>
+                        <div class="spacer-two h-100 w-75 bg-primary"></div>
+                    </div>
+                    <p class="mt-5 mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
                     <Button :btnElement="msg"/>
                 </div> 
             </div>  
@@ -42,7 +48,17 @@ export default {
 section{
     background-color: $bgPrimary;
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 300px;
+
+    h1{
+        font-size: 2.8rem;
+    }
+
+    p{
+        font-family: roboto;
+        color: $textPrimary;
+        font-size: .9rem;
+    }
 
     .double-foto-box{
         position: relative;
@@ -53,7 +69,6 @@ section{
         background-position: center;
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
-        // overflow: hidden;
 
         .cover{
             position: absolute;
@@ -83,6 +98,16 @@ section{
 
 
 
+    .spacer{
+        width: 50px;
+        height: 5px;
+        
+        .spacer-one,
+        .spacer-two{
+            border-radius: 10px;
+            background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
+        }
+    }
 
 
 }
