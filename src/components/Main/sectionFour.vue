@@ -38,13 +38,13 @@ export default {
         return{
             cards: [
                 {id: 0, path: 'ina-soulis-227104-unsplash-1024x1024'},
-                {id: 0, path: 'sunisa-misa-531163-unsplash-1024x1024'},
-                {id: 0, path: '355H-1024x1024'},
-                {id: 0, path: 'photo-1448932252197-d19750584e56-1024x1024'},
-                {id: 0, path: 'business-competition-PB366D8-1024x1024'},
-                {id: 0, path: 'cozy-sofa-in-living-room-PQR5AB9-1024x1024'},
-                {id: 0, path: 'aa9a4539-PQGJ7HU-1024x1024'},
-                {id: 0, path: 'cody-davis-253928-unsplash-1024x1024'},
+                {id: 1, path: 'sunisa-misa-531163-unsplash-1024x1024'},
+                {id: 2, path: '355H-1024x1024'},
+                {id: 3, path: 'photo-1448932252197-d19750584e56-1024x1024'},
+                {id: 4, path: 'business-competition-PB366D8-1024x1024'},
+                {id: 5, path: 'cozy-sofa-in-living-room-PQR5AB9-1024x1024'},
+                {id: 6, path: 'aa9a4539-PQGJ7HU-1024x1024'},
+                {id: 7, path: 'cody-davis-253928-unsplash-1024x1024'},
             ],
             msg: 'READ MORE'
         }
@@ -57,7 +57,7 @@ export default {
 @import '../variables/color';
 
 section{
-    padding: 100px 0;
+    padding: 100px 0 150px 0;
 }
 
     p{
