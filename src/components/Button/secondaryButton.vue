@@ -1,12 +1,12 @@
 <template>
-    <button class="text-white"> {{msg}} </button>
+    <button class="text-white"> {{btnElement}} </button>
 </template>
 
 <script>
 export default {
     name: 'secondaryButton',
     props: {
-        msg: String
+        btnElement: String
     }
     
 

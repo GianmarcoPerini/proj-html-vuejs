@@ -9,14 +9,14 @@
             </ul>
         </div>
         <div>
-            <Button :msg="buttonMsg"/>
+            <Button :btnElement="msg"/>
             <i class="fas fa-search ms-4 fs-4"></i>
         </div>
     </nav>
 </template>
 
 <script>
-import Button from '../Button/primaryButton'
+import Button from '../Button/primaryButton.vue'
 export default {
     name: 'Navigator',
     components: {
@@ -33,7 +33,7 @@ export default {
                 { objTitle: 'BLOG' },
                 { objTitle: 'CONTACTS' },
             ],
-            buttonMsg: 'PURCHASE',
+            msg: 'PURCHASE',
             indexCount: 2
         }
     },

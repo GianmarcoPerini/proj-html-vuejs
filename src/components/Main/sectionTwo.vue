@@ -1,17 +1,20 @@
 <template>
-    <section class="position-relative">
+    <section>
         <div class="container ">
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-5 col-11">
                     <h1 class="fw-bold">We are Here To<br> Make Your <span>Website</span> <br> Look More <span>Elegant</span> <br> And Stylish!</h1>
                     <div class="spacer d-flex mt-5 mb-5">
-                        <div class="spacer-one h-100 w-25 bg-primary me-1"></div>
-                        <div class="spacer-two h-100 w-75 bg-primary"></div>
+                        <div class="spacer-one h-100 w-25 me-1"></div>
+                        <div class="spacer-two h-100 w-75"></div>
                     </div>
-                    <Button :msg="'VIEW ALL'"/>
+                    <Button :btnElement="msg"/>
                 </div>
-                <div class="col-6">
-                </div>
+                <div class="col-7">
+                    <div class="card-wrapper">
+                        <Card v-for="(el, i) in cards" :key="i" :title="el.title" :text="el.text" :icon="el.icon"/>
+                    </div>
+                </div> 
             </div>  
         </div>
 
@@ -20,17 +23,39 @@
 
 <script>
 import Button from '../Button/primaryButton.vue'
-// import multiButton from '../Button/multiButton.vue'
+import Card from './cards'
 export default {
     name: 'sectionOne',
     components: {
         Button,
-        // multiButton,
+        Card
     },
     data(){
         return{
-            buttonMsg: 'READ MORE',
-            arrChoise: ['01','02','03']
+            msg: 'VIEW ALL',
+            arrChoise: ['01','02','03'],
+            cards: [
+                {
+                    title: 'Speed optimization',
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                    icon: 'fas fa-tachometer-alt'
+                },
+                {
+                    title: 'Website Design',
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                    icon: 'fas fa-tablet-alt'
+                },
+                {
+                    title: 'Cloud Solution',
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                    icon: 'fab fa-mixcloud'
+                },
+                {
+                    title: 'Online Marketing',
+                    text: 'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                    icon: 'fas fa-stopwatch'
+                },
+            ]
         }
     }
 
@@ -41,10 +66,15 @@ export default {
 @import '../variables/color';
 
 section{
-    // height: 100vh;
     background-color: #fff;
     padding-top: 150px;
+    padding-bottom: 150px;
     overflow-x: hidden;
+
+    .card-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     .subT{
         letter-spacing: 7px;
@@ -60,7 +90,7 @@ section{
 
     h1{
         line-height: 80px;
-        font-size: 3rem;
+        font-size: 2.5rem;
 
         span{
             color: $textActive;
@@ -73,8 +103,6 @@ section{
         height: 90%;
         width: 60%;
         pointer-events: none;
-        // background-color: red;
-        // overflow: auto;
 
         img{
             height: 100%;
@@ -82,8 +110,6 @@ section{
             object-fit: cover;
             position: absolute;
             right: -150px;
-            // left: -150px;
-            // top: 100px;
         }
     }
 
@@ -97,8 +123,6 @@ section{
             background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
         }
     }
-
-    
 }
 
 </style>
