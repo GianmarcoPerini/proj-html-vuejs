@@ -1,6 +1,6 @@
 <template>
     <section class="overflow-hidden">
-        <div class="fluid-container">
+        <div class="fluid-container pe-5">
             <div class="row justify-content-between">
                 <div class="col-lg-5 col-11">
                     <div class=" double-foto-box">
@@ -13,10 +13,7 @@
                 </div>
                 <div class="col-4 me-5">
                     <h1>Learn more about our <span>mission</span></h1>
-                    <div class="spacer d-flex mt-4 mb-4">
-                        <div class="spacer-one h-100 w-25 bg-primary me-1"></div>
-                        <div class="spacer-two h-100 w-75 bg-primary"></div>
-                    </div>
+                    <Spacer />
                     <p class="mt-5 mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
                     <Button :btnElement="msg"/>
                 </div> 
@@ -27,10 +24,12 @@
 
 <script>
 import Button from '../Button/primaryButton'
+import Spacer from '../Button/spacer'
 export default {
     name: 'sectionThree',
     components: {
         Button,
+        Spacer,
     },
     data(){
         return{

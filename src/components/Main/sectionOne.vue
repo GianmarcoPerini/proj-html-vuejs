@@ -5,10 +5,7 @@
                 <div class="col-lg-7 col-11">
                     <p class="subT fw-bold">17 YEARS OF EXPERIENCE</p>
                     <h1 class="fw-bold">We ara a <br> Web Design <span>Agency</span></h1>
-                    <div class="spacer d-flex mt-4 mb-4">
-                        <div class="spacer-one h-100 w-25 bg-primary me-1"></div>
-                        <div class="spacer-two h-100 w-75 bg-primary"></div>
-                    </div>                
+                    <Spacer />               
                     <p class="pt-4 pb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
                     <Button class="mb-5" :btnElement="msg"/>
                     <div class="pb-5 d-flex align-items-baseline justify-content-between">
@@ -27,11 +24,13 @@
 <script>
 import Button from '../Button/secondaryButton.vue'
 import multiButton from '../Button/multiButton.vue'
+import Spacer from '../Button/spacer'
 export default {
     name: 'sectionOne',
     components: {
         Button,
         multiButton,
+        Spacer
     },
     data(){
         return{

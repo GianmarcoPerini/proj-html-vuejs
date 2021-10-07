@@ -1,0 +1,68 @@
+<template>
+    <section>
+        <Spacer />
+        <div class="fluid-container overflow-hidden">
+            <div class="row justify-content-between">
+                <div class="col-5">
+                    <h1>Our recent <span>web design</span> & some example of past <span>project</span></h1>
+                </div>
+                <div class="col-6">
+                    <p class="mt-5 mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
+                </div>
+            </div>
+        </div>
+        <Spacer />
+        <div class="fluid-container overflow-hidden mt-5 pb-5">
+            <div class="row row-cols-4 g-1">
+                <div class="col" v-for="card in cards" :key="card.id">
+                    <imgCards :path="card.path"/>
+                </div>
+            </div>
+        </div>
+        <Button class="button d-block m-auto" :btnElement="msg"/>
+    </section>
+</template>
+
+<script>
+import Spacer from '../Button/spacer'
+import Button from '../Button/primaryButton.vue'
+import imgCards from './imgCards'
+export default {
+    name: 'sectionFour',
+    components: {
+        Spacer,
+        imgCards,
+        Button,
+    },
+    data(){
+        return{
+            cards: [
+                {id: 0, path: 'ina-soulis-227104-unsplash-1024x1024'},
+                {id: 0, path: 'sunisa-misa-531163-unsplash-1024x1024'},
+                {id: 0, path: '355H-1024x1024'},
+                {id: 0, path: 'photo-1448932252197-d19750584e56-1024x1024'},
+                {id: 0, path: 'business-competition-PB366D8-1024x1024'},
+                {id: 0, path: 'cozy-sofa-in-living-room-PQR5AB9-1024x1024'},
+                {id: 0, path: 'aa9a4539-PQGJ7HU-1024x1024'},
+                {id: 0, path: 'cody-davis-253928-unsplash-1024x1024'},
+            ],
+            msg: 'READ MORE'
+        }
+    }
+
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../variables/color';
+
+section{
+    padding: 100px 0;
+}
+
+    p{
+        font-family: roboto;
+        color: $textPrimary;
+        font-size: .9rem;
+    }
+</style>

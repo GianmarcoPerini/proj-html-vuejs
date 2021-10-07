@@ -1,13 +1,10 @@
 <template>
     <section>
-        <div class="container ">
+        <div class="fluid-container ps-3 pe-3">
             <div class="row">
                 <div class="col-lg-5 col-11">
                     <h1 class="fw-bold">We are Here To<br> Make Your <span>Website</span> <br> Look More <span>Elegant</span> <br> And Stylish!</h1>
-                    <div class="spacer d-flex mt-5 mb-5">
-                        <div class="spacer-one h-100 w-25 me-1"></div>
-                        <div class="spacer-two h-100 w-75"></div>
-                    </div>
+                    <Spacer class="mb-5" />
                     <Button :btnElement="msg"/>
                 </div>
                 <div class="col-7">
@@ -23,11 +20,13 @@
 <script>
 import Button from '../Button/primaryButton.vue'
 import Card from './cards'
+import Spacer from '../Button/spacer'
 export default {
     name: 'sectionOne',
     components: {
         Button,
-        Card
+        Card,
+        Spacer
     },
     data(){
         return{

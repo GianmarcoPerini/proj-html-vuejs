@@ -3,6 +3,7 @@
         <sectionOne />
         <sectionTwo />
         <sectionThree />
+        <sectionFour />
     </main>
 </template>
 
@@ -10,6 +11,7 @@
 import sectionOne from './sectionOne';
 import sectionTwo from './sectionTwo';
 import sectionThree from './sectionThree';
+import sectionFour from './sectionFour';
 
 export default {
     name: 'mainWrapper',
@@ -17,6 +19,7 @@ export default {
         sectionOne,
         sectionTwo,
         sectionThree,
+        sectionFour,
     }
 
 }
