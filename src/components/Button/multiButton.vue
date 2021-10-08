@@ -1,6 +1,6 @@
 <template>
     <div class="button d-flex align-items-center">
-        <div class="single-button"  @click="goTo(i), changeImage(el.path, el.text, el.highlight, i)" v-for="(el, i) in arrChoise" :key="i"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
+        <div class="single-button"  @click="goTo(i), changeImage(dataChoise[indexCount].path, dataChoise[indexCount].text, dataChoise[indexCount].highlight, i)" v-for="(el, i) in dataChoise" :key="el.id"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
     </div>
 </template>
 
@@ -8,6 +8,7 @@
 export default {
     name:'multiButton',
     props: {
+        dataChoise: Array,
         
         changeImage: {
             id: String,
@@ -19,12 +20,11 @@ export default {
         return{
             indexCount: 0,
             path: '',
-
-            arrChoise: [
-                {id: '01', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-36@2x.png", text:'Focus on your ' , highlight: 'Business',},
-                {id: '02', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-35@2x.png", text:'We are a Web Design ', highlight: 'Agency',},
-                {id: '03', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-40@2x.png", text:'A group of Expert ', highlight: 'Planner',},
-            ],
+            // arrChoise: [
+            //     {id: '01', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-36@2x.png", text:'Focus on your ' , highlight: 'Business',},
+            //     {id: '02', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-35@2x.png", text:'We are a Web Design ', highlight: 'Agency',},
+            //     {id: '03', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-40@2x.png", text:'A group of Expert ', highlight: 'Planner',},
+            // ],
 
         }
 
@@ -34,9 +34,16 @@ export default {
     methods:{
         goTo(index){
             this.indexCount = index
-        }
+        },
+
     },
 
+    created(){
+        setInterval(()=>{
+            this.indexCount++
+            if(this.indexCount >= this.dataChoise.length) this.indexCount = 0
+        },5000)
+    }
 }
 </script>
 

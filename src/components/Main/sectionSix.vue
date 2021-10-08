@@ -46,7 +46,6 @@ export default {
     mounted(){
         const now = date.format(new Date(), 'DD-MMM-YYYY'); 
         this.date = now
-        console.log(typeof now);
     }
 
 }

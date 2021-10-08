@@ -11,7 +11,7 @@
                         <h4>QUICK LINKS</h4>
                         <Spacer />
                         <ul>
-                            <li v-for="link in links" :key="link"> <a href="#"> {{link.name}} </a></li>
+                            <li v-for="(link, i) in links" :key="i"> <a href="#"> {{link.name}} </a></li>
                         </ul>
                     
                 </div>
@@ -19,7 +19,7 @@
                     <h4>CONTACT</h4>
                     <Spacer />
                     <ul>
-                        <li class="mt-4 mb-4" v-for="contact in contacts" :key="contact">{{contact.name}}</li>
+                        <li class="mt-4 mb-4" v-for="(contact, i) in contacts" :key="i">{{contact.name}}</li>
                     </ul>
                 </div>
                 <div class="col-3">
@@ -31,7 +31,6 @@
         </div>
 
         <div class="p-5 d-flex justify-content-between foot">
-            <a href="#"><div class="to-the-top position-fixed"><i class="fas fa-arrow-up text-dark"></i></div></a>
             <div>
                 <p class="m-0">© 2021 PHLOX BUSINESS THEME.</p>
             </div>
@@ -42,6 +41,7 @@
                 <i class="fab fa-pinterest-p"></i>
             </div>
         </div>
+        <a href="#"><div class="to-the-top position-fixed"><i class="fas fa-arrow-up text-dark"></i></div></a>
     </footer>
 </template>
 
@@ -125,6 +125,10 @@ export default {
         p{
             color: $textLight;
             text-transform: lowercase;
+        }
+
+        i{
+            color: $textLight;
         }
     }
 
