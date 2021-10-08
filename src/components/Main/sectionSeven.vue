@@ -12,9 +12,12 @@
                 <div class="col-6 text-center">
                     <div class="box green">
                         <p>What are you waiting for?</p>
-                        <h1>Lets Talk About Work</h1>
+                        <h1>Let's Talk About Work</h1>
                         <Button class="mt-5" :btnElement="msg" />
                     </div>
+                </div>
+                <div class="col-2 d-flex align-items-center" v-for="el in sponsor" :key="el.id">
+                    <Sponsor :path="el.path"/>
                 </div>
             </div>
         </div>
@@ -22,16 +25,27 @@
 </template>
 
 <script>
-import Button from '../Button/secondaryButton'
+import Button from '../Button/primaryButton'
+import Sponsor from './sponsor'
 export default {
     name: 'sectionSeven',
     components: {
         Button,
+        Sponsor
     },
 
     data(){
         return{
-            msg: 'START NOW'
+            msg: 'START NOW',
+
+            sponsor: [
+                {id: 0, path: 'client-1-2x'},
+                {id: 1, path: 'client-9-2x'},
+                {id: 2, path: 'client-7-2x'},
+                {id: 3, path: 'client-3-2x'},
+                {id: 4, path: 'client-4-2x'},
+                {id: 5, path: 'client-5-2x'},
+            ]
         }
     }
 
@@ -47,9 +61,21 @@ section{
 }
 
 .box{
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 40px 0;
     color: white;
+
+    h1{
+        font-family: work sans;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    p{
+        font-family: work sans;
+        font-style: italic;
+        font-weight: 300;
+    }
 
     input{
         padding: 15px 45px;
@@ -58,7 +84,6 @@ section{
         background-color: rgb(63, 63, 63);
         border: none;
         color: rgb(224, 224, 224);
-
     }
 }
 
@@ -71,4 +96,6 @@ section{
     background-image: $gradientBlack;
     box-shadow: $shadowBlack;
 }
+
+
 </style>

@@ -8,9 +8,12 @@
                     <Button :btnElement="msg"/>
                 </div>
                 <div class="col-7">
-                    <div class="card-wrapper">
-                        <Card v-for="(el, i) in cards" :key="i" :title="el.title" :text="el.text" :icon="el.icon"/>
+                    <div class="row">
+                        <div class="col-6 card-wrapper" v-for="(el, i) in cards" :key="i">
+                        <Card  :title="el.title" :text="el.text" :icon="el.icon"/>
                     </div>
+                    </div>
+                    
                 </div> 
             </div>  
         </div>
@@ -78,12 +81,6 @@ section{
         letter-spacing: 7px;
         font-size: .7rem;
         color: $textActive;
-    }
-
-    p{
-        font-family: roboto;
-        color: $textPrimary;
-        font-size: .9rem;
     }
 
     h1{

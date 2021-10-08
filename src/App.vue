@@ -38,7 +38,7 @@ export default {
 
 
 #app{
-  font-family: 'Varela Round', 'Roboto';
+  font-family: 'Varela Round', 'Roboto', 'Dosis', 'Work Sans';
   }
 
 </style>

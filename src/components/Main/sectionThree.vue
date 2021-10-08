@@ -54,9 +54,9 @@ section{
     }
 
     p{
-        font-family: roboto;
+        font-family: dosis;
         color: $textPrimary;
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     .double-foto-box{

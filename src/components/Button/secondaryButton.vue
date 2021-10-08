@@ -14,20 +14,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../variables/color';
     button{
-        background-image: linear-gradient(45deg, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
-        box-shadow: 10px 5px 20px 5px rgba(61,61,61,.3);
+        background-image: $gradientBlack;
+        box-shadow: $shadowBlack;
         border: none;
         border-radius: 30px;
         padding: 15px 45px;
-        transition: background-image 300ms linear;
         font-size: .8rem;
-        
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: box-shadow 200ms;
+
+        &::before{
+            position: absolute;
+            content: "";
+            inset: 0 0 0 0;
+            background-image: $gradientGreen;
+            z-index: -1;
+            transition: opacity 200ms linear;
+            opacity: 0;
+        }
+
+        &:hover::before{
+            opacity: 1;
+        }
 
         &:hover{
-            background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
-            box-shadow: 10px 5px 20px 5px rgba(1,217,165, .3);
+            box-shadow: $shadowGreen;
         }
     }
 

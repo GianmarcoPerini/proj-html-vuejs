@@ -26,26 +26,51 @@ export default {
 
 
     .card{
-        width: calc(100% / 2 - 20px);
+        width: 90%;
         padding: 30px;
         margin: 15px 10px;
         border: none;
         border-radius: 20px;
         box-shadow: 7px 7px 12px rgba(0,0,0,.1);
+        overflow: hidden;
         position: relative;
+        background-color: white;
+        z-index: 1;
+        
 
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient( 45deg, #05d9a5, #aee77f );
+            z-index: -1;
+            transition: opacity 200ms linear;
+            opacity: 0;
+        }
 
-        &:hover{
-            background-image: $gradientGreen;
+        &:hover::before {
             opacity: 1;
         }
 
+        &:hover p,
+        &:hover{
+            color: white;
+        }
+
         p{
-            font-family: roboto;
+            font-family: dosis;
             color: $textPrimary;
-            font-size: .8rem;
         }
 }
+
+
+
+
+
+
 
 
 

@@ -62,8 +62,8 @@ export default {
 
     p{
         z-index: 10;
-        font-family: roboto;
-        // margin-top: 50px;
+        font-family: dosis;
+        font-size: 1.5rem;
         color: #00d9a6;
     }
 }

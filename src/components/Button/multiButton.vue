@@ -1,6 +1,6 @@
 <template>
     <div class="button d-flex align-items-center">
-        <div class="single-button"  @click="goTo(i), changeImage(el.path, i)" v-for="(el, i) in btnElements" :key="i"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
+        <div class="single-button"  @click="goTo(i), changeImage(el.path, el.text, el.highlight, i)" v-for="(el, i) in arrChoise" :key="i"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
     name:'multiButton',
     props: {
-        btnElements: Array,
+        
         changeImage: {
             id: String,
             path: String,
@@ -19,7 +19,16 @@ export default {
         return{
             indexCount: 0,
             path: '',
+
+            arrChoise: [
+                {id: '01', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-36@2x.png", text:'Focus on your ' , highlight: 'Business',},
+                {id: '02', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-35@2x.png", text:'We are a Web Design ', highlight: 'Agency',},
+                {id: '03', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-40@2x.png", text:'A group of Expert ', highlight: 'Planner',},
+            ],
+
         }
+
+        
     },
 
     methods:{
@@ -35,7 +44,7 @@ export default {
 @import '../variables/color';
 
 .button{
-    background-image: linear-gradient(45deg, rgb(90, 90, 90) 0%, $bgSecondary 100%);
+    background-image: $gradientBlack;
     border-radius: 25px;
 }
 .single-button{
@@ -47,7 +56,7 @@ export default {
 }
 
 .active{
-    background-image: linear-gradient(-90deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
+    background-image: $gradientGreen;
 }
 
 </style>

@@ -43,6 +43,10 @@ export default {
     transform: translateX(-50%);
     padding: 15px 0 0 15px;
 
+    p{
+        font-family: work sans;
+    }
+
     i{
         font-size: 6px;
         vertical-align: middle;
