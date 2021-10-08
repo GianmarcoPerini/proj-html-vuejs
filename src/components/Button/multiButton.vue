@@ -20,12 +20,6 @@ export default {
         return{
             indexCount: 0,
             path: '',
-            // arrChoise: [
-            //     {id: '01', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-36@2x.png", text:'Focus on your ' , highlight: 'Business',},
-            //     {id: '02', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-35@2x.png", text:'We are a Web Design ', highlight: 'Agency',},
-            //     {id: '03', path: "https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/Group-40@2x.png", text:'A group of Expert ', highlight: 'Planner',},
-            // ],
-
         }
 
         
@@ -42,7 +36,7 @@ export default {
         setInterval(()=>{
             this.indexCount++
             if(this.indexCount >= this.dataChoise.length) this.indexCount = 0
-        },5000)
+        },8000)
     }
 }
 </script>
@@ -60,6 +54,10 @@ export default {
     margin: 4px;
     color: $textLight;
     cursor: pointer;
+
+    &:hover{
+        color: $textActive;
+    }
 }
 
 .active{

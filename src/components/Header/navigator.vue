@@ -1,11 +1,11 @@
 <template>
-    <nav class="d-flex align-items-baseline justify-content-between p-4">
+    <nav class="d-flex align-items-baseline justify-content-between pt-4 pe-4 ps-4">
         <div class="img-box">
             <img src="../../assets/cropped-Group-39-2x.png" alt="">
         </div>
         <div>
-            <ul class="d-flex">
-                <li class="pb-3" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" ><a href="#"> {{el.objTitle}}</a></li>
+            <ul class="d-flex m-0">
+                <li class="pb-4" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" ><a href="#"> {{el.objTitle}}</a></li>
             </ul>
         </div>
         <div>
@@ -74,7 +74,9 @@ nav{
     }
 
     i{
-        color: rgba(1,217,165,1);
+        color: $textActive;
+        transition: 200ms;
+        cursor: pointer;
 
         &:hover{
             color: rgba(61,61,61,1);
@@ -82,7 +84,7 @@ nav{
     }
 
     .active{
-        border-bottom: 1px solid black;
+        border-bottom:3px solid rgba(1,217,165,1);
     }
 }
 
