@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-3">
                     
-                        <h1>QUICK LINKS</h1>
+                        <h4>QUICK LINKS</h4>
                         <Spacer />
                         <ul>
                             <li v-for="link in links" :key="link"> <a href="#"> {{link.name}} </a></li>
@@ -16,13 +16,30 @@
                     
                 </div>
                 <div class="col-3">
-                    <h1>CONTACT</h1>
+                    <h4>CONTACT</h4>
                     <Spacer />
                     <ul>
                         <li class="mt-4 mb-4" v-for="contact in contacts" :key="contact">{{contact.name}}</li>
                     </ul>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-3">
+                    <h4>LOCATION ON MAP</h4>
+                    <Spacer />
+                    <img src="../../assets/map.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="p-5 d-flex justify-content-between foot">
+            <a href="#"><div class="to-the-top position-fixed"><i class="fas fa-arrow-up text-dark"></i></div></a>
+            <div>
+                <p class="m-0">© 2021 PHLOX BUSINESS THEME.</p>
+            </div>
+
+            <div>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter ms-4 me-4"></i>
+                <i class="fab fa-pinterest-p"></i>
             </div>
         </div>
     </footer>
@@ -63,6 +80,25 @@ export default {
 <style lang="scss" scoped>
 @import '../variables/color';
 
+    .to-the-top{
+        z-index: 10;
+        bottom: 30px;
+        right: 10px;
+        padding: 20px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20px;
+
+        i{
+            color: yellow;
+        }
+    }
+
 
     ul{
         list-style: none;
@@ -79,6 +115,17 @@ export default {
 
     li a:hover{
         color: $textActive;
+    }
+
+    .foot{
+        background-color: $bgFoot;
+        
+        
+
+        p{
+            color: $textLight;
+            text-transform: lowercase;
+        }
     }
 
 
