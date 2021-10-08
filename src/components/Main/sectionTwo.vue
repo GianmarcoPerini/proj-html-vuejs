@@ -2,20 +2,21 @@
     <section>
         <div class="fluid-container ps-3 pe-3">
             <div class="row">
-                <div class="col-lg-5 col-11">
+                <div class="col-md-6 col-12">
                     <h1 class="fw-bold">We are Here To<br> Make Your <span>Website</span> <br> Look More <span>Elegant</span> <br> And Stylish!</h1>
                     <Spacer class="mb-5" />
                     <Button :btnElement="msg"/>
                 </div>
-                <div class="col-7">
+                <div class="col-md-6 col-12">
                     <div class="row">
-                        <div class="col-6 card-wrapper" v-for="(el, i) in cards" :key="i">
+                        <div class="col-lg-6 col-12 card-wrapper" v-for="(el, i) in cards" :key="i">
                         <Card  :title="el.title" :text="el.text" :icon="el.icon"/>
                     </div>
                     </div>
                     
                 </div> 
-            </div>  
+            </div> 
+            <!-- <Button :btnElement="msg"/>  -->
         </div>
     </section>
 </template>

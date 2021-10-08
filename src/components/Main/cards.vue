@@ -26,7 +26,7 @@ export default {
 
 
     .card{
-        width: 90%;
+        width: 100%;
         padding: 30px;
         margin: 15px 10px;
         border: none;

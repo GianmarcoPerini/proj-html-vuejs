@@ -2,7 +2,7 @@
     <section class="overflow-hidden">
         <div class="fluid-container pe-5">
             <div class="row justify-content-between">
-                <div class="col-lg-5 col-11">
+                <div class="col-md-5 col-11">
                     <div class=" double-foto-box">
                         <div class="cover"></div>
                         <div class="box-img">
@@ -11,7 +11,7 @@
                             
                     </div>
                 </div>
-                <div class="col-4 me-5">
+                <div class="info col-md-4 col-10 me-5">
                     <h1>Learn more about our <span>mission</span></h1>
                     <Spacer />
                     <p class="mt-5 mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind text. Separated they live in Bookmarksgrove right at the cost of the Semantics, a large language ocean. Separated the live in Bookmarksgrove.</p>
@@ -47,7 +47,7 @@ export default {
 section{
     background-color: $bgPrimary;
     padding-top: 150px;
-    padding-bottom: 300px;
+    padding-bottom: 150px;
 
     h1{
         font-size: 2.8rem;
@@ -97,16 +97,15 @@ section{
 
 
 
-    .spacer{
-        width: 50px;
-        height: 5px;
-        
-        .spacer-one,
-        .spacer-two{
-            border-radius: 10px;
-            background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
-        }
+@media screen and (max-width: 767px) {
+    h1{
+        margin-top: 120px;
     }
+
+    .info{
+        margin-left: 20px;
+    }
+}
 
 
 }
