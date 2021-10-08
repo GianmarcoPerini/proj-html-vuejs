@@ -1,18 +1,23 @@
 <template>
-    <nav class="d-flex align-items-baseline justify-content-between pt-4 pe-4 ps-4">
-        <div class="img-box">
-            <img src="../../assets/cropped-Group-39-2x.png" alt="">
+    <div class="fluid-container overflow-hidden pt-4 pe-4 ps-4">
+        <div class="row justify-content-between">
+            <div class="col-md-3 col-12 img-box">
+                <img class="d-block m-auto" src="../../assets/cropped-Group-39-2x.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-8 col-12 text-center mt-sd-0 mt-2">
+                <ul class="m-0 p-0">
+                    <li class="d-inline-block pb-4" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" ><a href="#"> {{el.objTitle}}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 co col-12  d-flex align-items-center justify-content-end">
+                <Button class="button" :btnElement="msg"/>
+                <i class="fas fa-search ms-4 fs-4"></i>
+            </div>
         </div>
-        <div>
-            <ul class="d-flex m-0">
-                <li class="pb-4" v-for="(el, i) in menu" :key="i" :class="(i == indexCount) ? 'active' : '' " @click="goTo(i)" ><a href="#"> {{el.objTitle}}</a></li>
-            </ul>
-        </div>
-        <div>
-            <Button :btnElement="msg"/>
-            <i class="fas fa-search ms-4 fs-4"></i>
-        </div>
-    </nav>
+        
+    </div>
+    
+    
 </template>
 
 <script>
@@ -49,13 +54,13 @@ export default {
 <style lang="scss" scoped>
 @import '../variables/color';
 
-nav{
+
 
     .img-box{
-        width: 200px;
+        // width: 200px;
 
         img{
-            width: 100%;
+            width: 70%;
         }
     }
 
@@ -86,7 +91,12 @@ nav{
     .active{
         border-bottom:3px solid rgba(1,217,165,1);
     }
-}
 
+@media screen and (max-width: 992px) {
+    .button,
+    i {
+        display: none;
+    }
+}
 
 </style>
