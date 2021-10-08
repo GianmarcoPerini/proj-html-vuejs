@@ -21,7 +21,6 @@
                     <Sponsor class="p-4" :path="el.path" v-for="el in sponsor" :key="el.id"/>
                 </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -48,11 +47,11 @@ export default {
                 {id: 3, path: 'client-3-2x'},
                 {id: 4, path: 'client-4-2x'},
                 {id: 5, path: 'client-5-2x'},
-            ]
+            ],
         }
     }
-
 }
+
 </script>
 
 <style lang="scss" scoped>

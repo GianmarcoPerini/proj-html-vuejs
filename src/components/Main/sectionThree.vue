@@ -97,16 +97,15 @@ section{
 
 
 
-@media screen and (max-width: 767px) {
-    h1{
-        margin-top: 120px;
-    }
+    @media screen and (max-width: 767px) {
+        h1{
+            margin-top: 120px;
+        }
 
-    .info{
-        margin-left: 20px;
+        .info{
+            margin-left: 20px;
+        }
     }
 }
 
-
-}
 </style>

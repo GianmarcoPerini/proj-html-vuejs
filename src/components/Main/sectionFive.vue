@@ -14,7 +14,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -29,11 +28,11 @@ export default {
 @import '../variables/color';
 
 .bg-img{
-    // height: 550px;
     background-image: url(../../assets/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
     .cover{
         inset: 0 0 0 0;
         background-color: rgba(0, 0, 0, .7);
@@ -61,4 +60,5 @@ export default {
         color: #00d9a6;
     }
 }
+
 </style>

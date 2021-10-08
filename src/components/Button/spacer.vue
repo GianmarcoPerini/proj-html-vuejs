@@ -22,7 +22,7 @@ export default {
         .spacer-one,
         .spacer-two{
             border-radius: 10px;
-            background-image: linear-gradient(45deg, rgba(151,225,95,1) 0%, rgba(1,217,165,1) 100%);
+            background-image: $gradientGreen;
         }
     }
 

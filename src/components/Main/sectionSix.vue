@@ -10,9 +10,7 @@
                 <div class="col-md-4 col-12" v-for="card in cards" :key="card.id">
                     <Cards class="mb-5" :date="date" :path="card.path" :text="card.text" :creator="card.creator"/>
                 </div>
-                
             </div>
-            
         </div>
         <Button class="d-block m-auto mt-5" :btnElement="msg"/>
     </section>

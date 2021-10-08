@@ -57,8 +57,6 @@ export default {
 
 
     .img-box{
-        // width: 200px;
-
         img{
             width: 70%;
         }
@@ -89,7 +87,7 @@ export default {
     }
 
     .active{
-        border-bottom:3px solid rgba(1,217,165,1);
+        border-bottom:3px solid $textActive;
     }
 
 @media screen and (max-width: 992px) {

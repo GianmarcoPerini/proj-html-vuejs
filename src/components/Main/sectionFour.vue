@@ -1,6 +1,5 @@
 <template>
     <section>
-        
         <div class="fluid-container overflow-hidden ps-3 pe-3">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-10">
@@ -29,6 +28,7 @@
 import Spacer from '../Button/spacer'
 import Button from '../Button/primaryButton.vue'
 import imgCards from './imgCards'
+
 export default {
     name: 'sectionFour',
     components: {
@@ -51,7 +51,6 @@ export default {
             msg: 'READ MORE'
         }
     }
-
 }
 </script>
 

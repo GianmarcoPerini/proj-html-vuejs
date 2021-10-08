@@ -91,10 +91,6 @@ export default {
         background-color: white;
         border: 1px solid black;
         border-radius: 20px;
-
-        i{
-            color: yellow;
-        }
     }
 
 
@@ -117,8 +113,6 @@ export default {
 
     .foot{
         background-color: $bgFoot;
-        
-        
 
         p{
             color: $textLight;

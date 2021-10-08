@@ -1,6 +1,15 @@
 <template>
     <div class="button d-flex align-items-center">
-        <div class="single-button"  @click="goTo(i), changeImage(dataChoise[indexCount].path, dataChoise[indexCount].text, dataChoise[indexCount].highlight, i)" v-for="(el, i) in dataChoise" :key="el.id"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
+        <!-- Al click la funzione:
+                a: cambia l'index dell'active per evidenziare la slide attiva
+                b: invia al padre le informazioni della slide attiva
+            
+            Inoltre cicla sui vari elementi che gli vengono passati e li renderizza all'interno del "Button"
+        -->
+        <div class="single-button" 
+        @click="goTo(i),
+        changeImage(dataChoise[indexCount].path, dataChoise[indexCount].text, dataChoise[indexCount].highlight, i)"
+        v-for="(el, i) in dataChoise" :key="el.id"  :class="(i == indexCount) ? 'active' : '' " > {{el.id}} </div>
     </div>
 </template>
 
@@ -9,17 +18,11 @@ export default {
     name:'multiButton',
     props: {
         dataChoise: Array,
-        
-        changeImage: {
-            id: String,
-            path: String,
-        },
     },
 
     data(){
         return{
             indexCount: 0,
-            path: '',
         }
 
         

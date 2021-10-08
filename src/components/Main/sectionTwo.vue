@@ -16,7 +16,6 @@
                     
                 </div> 
             </div> 
-            <!-- <Button :btnElement="msg"/>  -->
         </div>
     </section>
 </template>

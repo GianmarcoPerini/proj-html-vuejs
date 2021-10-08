@@ -1,12 +1,9 @@
 <template>
-
-        <div class="card">
-            <i class="fs-1" :class="icon"></i>
-            <h4 class="mb-3 mt-5">{{title}}</h4>
-            <p>{{text}}</p>
-            
-        </div>
-
+    <div class="card">
+        <i class="fs-1" :class="icon"></i>
+        <h4 class="mb-3 mt-5">{{title}}</h4>
+        <p>{{text}}</p>
+    </div>
 </template>
 
 <script>
@@ -31,7 +28,7 @@ export default {
         margin: 15px 10px;
         border: none;
         border-radius: 20px;
-        box-shadow: 7px 7px 12px rgba(0,0,0,.1);
+        box-shadow: $shadowLightBlack;
         overflow: hidden;
         position: relative;
         background-color: white;

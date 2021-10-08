@@ -1,4 +1,5 @@
 <template>
+    <!-- Bottone che in base alla prop passata dal padre cambia il testo dinamicamente -->
     <button class="text-white"> {{btnElement}} </button>
 </template>
 
@@ -8,8 +9,6 @@ export default {
     props: {
         btnElement: String
     }
-    
-
 }
 </script>
 

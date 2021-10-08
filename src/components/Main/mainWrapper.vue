@@ -29,7 +29,6 @@ export default {
         sectionFive,
         sectionSix,
         SectionSeven,
-
     }
 
 }
